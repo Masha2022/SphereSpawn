@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3363523964784519989}
   - component: {fileID: 7685770191881557731}
   - component: {fileID: 258132060796691961}
+  - component: {fileID: -911750712552096168}
   m_Layer: 0
   m_Name: SphereLilltle
   m_TagString: Untagged
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 81ceea9867e79a94bbd60b9ca68e3b20, type: 2}
+  - {fileID: 2100000, guid: ff763b13b8ff9eb4d906b1c64c0cd627, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,3 +98,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-911750712552096168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440002331122025091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64ee0e4fc8db7141ac7b45e62a359df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

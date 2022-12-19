@@ -11,19 +11,19 @@ public class SpawnSphere : MonoBehaviour
     public float lon;
     [SerializeField] public float _countPoints = 100;
     [SerializeField] public GameObject _prefabSphere;
-    [SerializeField] public GameObject _mainPrefab;
     public List<Vector3> points;
-    private Color _color;
+    public List<GameObject> _littleSpheres;
 
-    private void Start()
+    private void Awake()
     {
         var pointsOnSphere = GetPointsOnSphere();
         for (var i = 0; i < pointsOnSphere.Count; i++)
         {
-            Instantiate(_prefabSphere, new Vector3(pointsOnSphere[i].x, pointsOnSphere[i].y, pointsOnSphere[i].z),
+           var sphere = Instantiate(_prefabSphere, new Vector3(pointsOnSphere[i].x, pointsOnSphere[i].y, pointsOnSphere[i].z),
                 Quaternion.identity);
+            _littleSpheres.Add(sphere);
         }
-        
+        //Debug.Log(_littleSpheres.Count);
     }
 
     public List<Vector3> GetPointsOnSphere()
@@ -48,6 +48,4 @@ public class SpawnSphere : MonoBehaviour
             (float)Math.Cos(lat));
         return a;
     }
-
-   
 }

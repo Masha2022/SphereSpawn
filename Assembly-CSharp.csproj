@@ -42,6 +42,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\SpawnSphere.cs" />
+     <Compile Include="Assets\Scripts\ChangeColorSphere.cs" />
+     <Compile Include="Assets\Scripts\MoveMap.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Materials\Materials" />
