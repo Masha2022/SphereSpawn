@@ -41,6 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Shoot.cs" />
      <Compile Include="Assets\Scripts\SpawnSphere.cs" />
      <Compile Include="Assets\Scripts\ChangeColorSphere.cs" />
      <Compile Include="Assets\Scripts\MoveMap.cs" />

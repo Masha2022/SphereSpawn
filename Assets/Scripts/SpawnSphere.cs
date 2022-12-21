@@ -13,6 +13,7 @@ public class SpawnSphere : MonoBehaviour
     [SerializeField] public GameObject _prefabSphere;
     public List<Vector3> points;
     public List<GameObject> _littleSpheres;
+    [SerializeField]private Transform _point;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class SpawnSphere : MonoBehaviour
         {
            var sphere = Instantiate(_prefabSphere, new Vector3(pointsOnSphere[i].x, pointsOnSphere[i].y, pointsOnSphere[i].z),
                 Quaternion.identity);
+           sphere.transform.SetParent(_point);
             _littleSpheres.Add(sphere);
         }
         //Debug.Log(_littleSpheres.Count);
