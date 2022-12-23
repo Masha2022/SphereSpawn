@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 654443499}
   - component: {fileID: 654443498}
   m_Layer: 0
-  m_Name: SphereForBulletLittle
+  m_Name: SphereLittle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,10 +883,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabSphere: {fileID: 1440002331122025091, guid: 2af0b753235fa37438abc277e0feee4a, type: 3}
-  _prefabBulletBig: {fileID: 780445590}
+  _prefabSphereBig: {fileID: 780445590}
   _prefabSphereLittle: {fileID: 654443496}
   _spheres: []
   _spheresColorful: []
+  _map: {fileID: 172167225}
 --- !u!114 &1924563715
 MonoBehaviour:
   m_ObjectHideFlags: 0
