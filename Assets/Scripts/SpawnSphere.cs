@@ -7,10 +7,12 @@ using Random = UnityEngine.Random;
 
 public class SpawnSphere : MonoBehaviour
 {
-    public float lat;
-    public float lon;
     [SerializeField] public float _countPoints = 100;
     [SerializeField] public GameObject _prefabSphere;
+    
+    private float lat;
+    private float lon;
+    
     public List<Vector3> points;
     public List<GameObject> _littleSpheres;
     [SerializeField]private Transform _point;
