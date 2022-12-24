@@ -42,13 +42,18 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BulletController.cs" />
+     <Compile Include="Assets\Scripts\BulletDestroy.cs" />
      <Compile Include="Assets\Scripts\Shoot.cs" />
      <Compile Include="Assets\Scripts\SpawnSphere.cs" />
      <Compile Include="Assets\Scripts\ChangeColorSphere.cs" />
      <Compile Include="Assets\Scripts\MoveMap.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Skybox" />
      <Folder Include="Assets\Prefabs" />
+     <Folder Include="Assets\Skybox\Materials" />
+     <Folder Include="Assets\Skybox\Cubemaps" />
      <Folder Include="Assets\Materials\Materials" />
+     <Folder Include="Assets\Skybox\Scene" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Scenes" />

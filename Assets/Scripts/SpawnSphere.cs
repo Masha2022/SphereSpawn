@@ -27,7 +27,7 @@ public class SpawnSphere : MonoBehaviour
            sphere.transform.SetParent(_point);
             _littleSpheres.Add(sphere);
         }
-        //Debug.Log(_littleSpheres.Count);
+        Debug.Log("SpawnSphere _littleSpheres.Count="+_littleSpheres.Count);
     }
 
     public List<Vector3> GetPointsOnSphere()
