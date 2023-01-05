@@ -9,7 +9,7 @@ public class BulletController : MonoBehaviour
     [SerializeField] public SpawnSphere _point;
     private Color _currentColorBullet;
     private Color _currentColorSphere;
-    private List<Color> _colors;
+    private Color _colorFromList;
     private List<GameObject> _spheres;
 
 
@@ -17,7 +17,7 @@ public class BulletController : MonoBehaviour
     {
         //Cursor.lockState = CursorLockMode.Locked;
         _spheres = _point.GetComponent<SpawnSphere>()._littleSpheres;
-        CreateListColor();
+        _colorFromList = _point.GetComponent<ChangeColorSphere>().ReturnRandomColor();
     }
 
     private void DetermineColorBullet()
@@ -50,14 +50,5 @@ public class BulletController : MonoBehaviour
             }
         }
     }
-
-    private void CreateListColor()
-    {
-        _colors = new List<Color>();
-
-        _colors.Add(Color.red);
-        _colors.Add(Color.yellow);
-        _colors.Add(Color.green);
-        _colors.Add(Color.blue);
-    }
+    
 }

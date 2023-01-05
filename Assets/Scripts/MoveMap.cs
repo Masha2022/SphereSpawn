@@ -9,10 +9,10 @@ public class MoveMap : MonoBehaviour
     private void Update()
     {
         var horizontalInput = Input.GetAxis("Horizontal");
-        if (horizontalInput!= 0)
+        var verticalalInput = Input.GetAxis("Vertical");
+        if (horizontalInput!= 0 || verticalalInput !=0)
         {
-            Quaternion rotationY = Quaternion.AngleAxis(-horizontalInput*_speed, Vector3.up);
-            transform.rotation *= rotationY;
+            transform.Rotate(verticalalInput*_speed, horizontalInput*_speed, 0, Space.World);
         }
         
     }

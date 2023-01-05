@@ -48,8 +48,7 @@ public class SpawnSphere : MonoBehaviour
 
     public Vector3 Pointed(float lat, float lon)
     {
-        var a = new Vector3((float)(Math.Cos(lon) * Math.Sin(lat)), (float)(Math.Sin(lon) * Math.Sin(lat)),
+        return new Vector3((float)(Math.Cos(lon) * Math.Sin(lat)), (float)(Math.Sin(lon) * Math.Sin(lat)),
             (float)Math.Cos(lat));
-        return a;
     }
 }

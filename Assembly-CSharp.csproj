@@ -57,6 +57,7 @@
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\Skybox\Cubemaps\Materials" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.1.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

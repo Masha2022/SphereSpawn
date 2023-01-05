@@ -27,22 +27,19 @@ public class Shoot : MonoBehaviour
 
     private void Shooting()
     {
-        Vector3 mousePosition = Input.mousePosition - transform.position;
-        mousePosition.z = 5.0f;
+        Vector3 mousePosition = Input.mousePosition;
 
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(mousePosition);
-        //Debug.Log("worldPoint " + worldPoint);
+        var mouseRay = Camera.main.ScreenPointToRay(mousePosition);
 
-        var direction = worldPoint.normalized;
-       // Debug.Log("direction " + direction);
-
-        if (Input.GetMouseButtonDown(0))
+        if (Physics.Raycast(mouseRay, out var hitInfo))
         {
+            var direction = (hitInfo.point - transform.position).normalized;
             _bulletPrefab.SetActive(true);
             var bullet = Instantiate(_bulletPrefab, transform.position, transform.rotation);
             bullet.GetComponent<Rigidbody>().AddForce(direction * _forse);
-            ChangeColorBullet();
         }
+        
+        ChangeColorBullet();
     }
 
     private void ChangeColorBullet()
