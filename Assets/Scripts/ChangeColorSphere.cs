@@ -16,7 +16,7 @@ public class ChangeColorSphere : MonoBehaviour
     private float _radius;
     private Vector3 _centerSphere;
     public Collider[] _hitColliders;
-    [SerializeField] public List<Color> _colors;
+    [FormerlySerializedAs("_colors")] [SerializeField] public List<Material> _materials;
 
     [SerializeField] private Shoot _map;
 
@@ -24,7 +24,7 @@ public class ChangeColorSphere : MonoBehaviour
     {
         _spheres = GetComponent<SpawnSphere>().GetPointsOnSphere();
 
-        _prefabSphere.GetComponent<Renderer>().material.color = ReturnRandomColor();
+        _prefabSphere.GetComponent<Renderer>().material = ReturnRandomMaterial();
         _map.ShootEvent += ChangeColorBulletSpheres;
 
         ChangeColorBulletSpheres();
@@ -33,35 +33,33 @@ public class ChangeColorSphere : MonoBehaviour
     private void Start()
     {
         CreateMapForGame();
-        //ChangeColor();
-        //Debug.Log("ChangeColorSphere _hitColliders.Length" + _hitColliders.Length);
     }
 
     public void ChangeColor()
     {
-        for (var j = 0; j < _colors.Count; j++)
+        for (var j = 0; j < _materials.Count; j++)
         {
             var range = (int)Random.Range(1f, _spheres.Count);
             _radius = Random.Range(0.1f, 1f);
             Debug.Log("_radius =" + _radius);
             _centerSphere = _spheres[range].normalized * _radius;
             _hitColliders = GetCollaiders(_centerSphere, _radius);
-            var color = ReturnRandomColor();
+            var material = ReturnRandomMaterial();
             for (var i = 0; i < _hitColliders.Length; i++)
             {
                 var component = _hitColliders[i].gameObject.GetComponent<Renderer>();
-                component.material.color = color;
+                component.material = material;
             }
         }
     }
 
     private void ChangeColorBulletSpheres()
     {
-        _prefabSphereBig.GetComponent<Renderer>().material.color =
-            ReturnRandomColor();
+        _prefabSphereBig.GetComponent<Renderer>().material =
+            ReturnRandomMaterial();
 
-        _prefabSphereLittle.GetComponent<Renderer>().material.color =
-            ReturnRandomColor();
+        _prefabSphereLittle.GetComponent<Renderer>().material =
+            ReturnRandomMaterial();
     }
 
     private void CreateMapForGame()
@@ -79,8 +77,8 @@ public class ChangeColorSphere : MonoBehaviour
         return Physics.OverlapSphere(center, radius);
     }
 
-    public Color ReturnRandomColor()
+    public Material ReturnRandomMaterial()
     {
-        return _colors[Random.Range(0, _colors.Count)];
+        return _materials[Random.Range(0, _materials.Count)];
     }
 }

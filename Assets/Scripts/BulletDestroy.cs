@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class BulletDestroy : MonoBehaviour
 {
-    [SerializeField] public GameObject _bulllet;
+    //[SerializeField] public GameObject _bulllet;
 
     private void OnTriggerEnter(Collider other)
     {
-        _bulllet.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
