@@ -41,23 +41,20 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BulletController.cs" />
-     <Compile Include="Assets\Scripts\BulletDestroy.cs" />
-     <Compile Include="Assets\Scripts\Shoot.cs" />
-     <Compile Include="Assets\Scripts\SpawnSphere.cs" />
-     <Compile Include="Assets\Scripts\ChangeColorSphere.cs" />
+     <Compile Include="Assets\Scripts\PaintableObject.cs" />
+     <Compile Include="Assets\Scripts\SpheresGenerator.cs" />
+     <Compile Include="Assets\Scripts\AvailableMaterialsProvider.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\ProjectileController.cs" />
+     <Compile Include="Assets\Scripts\PaintController.cs" />
      <Compile Include="Assets\Scripts\MoveMap.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Folder Include="Assets" />
-     <Folder Include="Assets\Skybox" />
      <Folder Include="Assets\Prefabs" />
-     <Folder Include="Assets\Skybox\Materials" />
-     <Folder Include="Assets\Skybox\Cubemaps" />
      <Folder Include="Assets\Materials\Materials" />
-     <Folder Include="Assets\Skybox\Scene" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Scenes" />
-     <Folder Include="Assets\Skybox\Cubemaps\Materials" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.1.22f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

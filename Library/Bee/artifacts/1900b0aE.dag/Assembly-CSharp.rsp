@@ -358,12 +358,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Scripts/BulletController.cs"
-"Assets/Scripts/BulletDestroy.cs"
-"Assets/Scripts/ChangeColorSphere.cs"
+"Assets/Scripts/AvailableMaterialsProvider.cs"
+"Assets/Scripts/GameManager.cs"
 "Assets/Scripts/MoveMap.cs"
-"Assets/Scripts/Shoot.cs"
-"Assets/Scripts/SpawnSphere.cs"
+"Assets/Scripts/NewBehaviourScript.cs"
+"Assets/Scripts/PaintableObject.cs"
+"Assets/Scripts/PaintController.cs"
+"Assets/Scripts/ProjectileController.cs"
+"Assets/Scripts/SpheresGenerator.cs"
 -langversion:9.0
 
 /deterministic
